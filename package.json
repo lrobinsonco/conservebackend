@@ -1,0 +1,26 @@
+{
+  "name": "conservebackend",
+  "version": "1.0.0",
+  "description": "backend for conserve app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lrobinsonco/conservebackend.git"
+  },
+  "author": "Lee Robinson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lrobinsonco/conservebackend/issues"
+  },
+  "homepage": "https://github.com/lrobinsonco/conservebackend#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.3",
+    "mongodb": "^2.2.30"
+  }
+}
