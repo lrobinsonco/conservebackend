@@ -10,7 +10,9 @@ var app = express();
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 // mongodb://heroku_7kjfrlfk:g64o6j6cfuua16gfvi2q5mu8vg@ds157702.mlab.com:57702/heroku_7kjfrlfk
 const mongoURI = process.env.MONGODB_URI;
 
