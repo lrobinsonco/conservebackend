@@ -15,8 +15,8 @@ app.use(cors())
 // if (process.env.NODE_ENV === "production") {
 //   app.use(express.static("client/build"));
 // }
-const mongoURI = 'mongodb://heroku_7kjfrlfk:g64o6j6cfuua16gfvi2q5mu8vg@ds157702.mlab.com:57702/heroku_7kjfrlfk'
-// const mongoURI = process.env.MONGODB_URI;
+// const mongoURI = 'mongodb://heroku_7kjfrlfk:g64o6j6cfuua16gfvi2q5mu8vg@ds157702.mlab.com:57702/heroku_7kjfrlfk'
+const mongoURI = process.env.MONGODB_URI;
 
 const dbUrl = mongoURI || 'mongodb://localhost/crudwithredux';
 
