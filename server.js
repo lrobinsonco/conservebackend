@@ -9,14 +9,17 @@ var port = process.env.PORT || 8080;
 var app = express();
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
+app.use(cors())
+
 
 // if (process.env.NODE_ENV === "production") {
 //   app.use(express.static("client/build"));
 // }
-// mongodb://heroku_7kjfrlfk:g64o6j6cfuua16gfvi2q5mu8vg@ds157702.mlab.com:57702/heroku_7kjfrlfk
-const mongoURI = process.env.MONGODB_URI;
+const mongoURI = 'mongodb://heroku_7kjfrlfk:g64o6j6cfuua16gfvi2q5mu8vg@ds157702.mlab.com:57702/heroku_7kjfrlfk'
+// const mongoURI = process.env.MONGODB_URI;
 
-const dbUrl = mongoURI || 'mongodb://localhost/crudwithredux';
+const dbUrl = mongoURI
+// || 'mongodb://localhost/crudwithredux';
 
 function validate(data) {
 
@@ -32,7 +35,7 @@ function validate(data) {
   return { errors, isValid };
 }
 
-app.use(cors())
+// app.use(cors())
 
 mongodb.MongoClient.connect(dbUrl, function(err, db) {
 
