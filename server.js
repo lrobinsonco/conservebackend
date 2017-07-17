@@ -18,8 +18,7 @@ app.use(cors())
 const mongoURI = 'mongodb://heroku_7kjfrlfk:g64o6j6cfuua16gfvi2q5mu8vg@ds157702.mlab.com:57702/heroku_7kjfrlfk'
 // const mongoURI = process.env.MONGODB_URI;
 
-const dbUrl = mongoURI
-// || 'mongodb://localhost/crudwithredux';
+const dbUrl = mongoURI || 'mongodb://localhost/crudwithredux';
 
 function validate(data) {
 
